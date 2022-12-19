@@ -9,19 +9,17 @@ class ThreadJoining extends Thread
 			try
 			{
 				Thread.sleep(500);
-				System.out.println("Current Thread: "
-						+ Thread.currentThread().getName());
+				System.out.println("Current Thread: "+ Thread.currentThread().getName());
 			}
 			catch(Exception ex)
 			{
-				System.out.println("Exception has" +
-								" been caught" + ex);
+				System.out.println("Exception has" +" been caught" + ex);
 			}
 			System.out.println(i);
 		}
 	}
 }
-class GFG
+class JTS
 {
 	public static void main (String[] args)
 	{
@@ -31,28 +29,24 @@ class GFG
 		t1.start();
 		try
 		{
-			System.out.println("Current Thread: "
-				+ Thread.currentThread().getName());
+			System.out.println("Current Thread: "+ Thread.currentThread().getName());
 			t1.join();
 		}
 
 		catch(Exception ex)
 		{
-			System.out.println("Exception has " +
-								"been caught" + ex);
+			System.out.println("Exception has been caught" + ex);
 		}
 		t2.start();
 		try
 		{
-			System.out.println("Current Thread: "
-				+ Thread.currentThread().getName());
+			System.out.println("Current Thread: "+ Thread.currentThread().getName());
 			t2.join();
 		}
 
 		catch(Exception ex)
 		{
-			System.out.println("Exception has been" +
-									" caught" + ex);
+			System.out.println("Exception has been caught" + ex);
 		}
 
 		t3.start();
