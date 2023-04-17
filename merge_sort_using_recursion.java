@@ -1,9 +1,6 @@
 package trainingday5;
-
 import java.util.Scanner;
-
 public class merge_sort_using_recursion {
-
 		void merge(int arr[],int l,int m,int r)
 		{	int n1=m-l+1;
 			int n2=r-m;
@@ -52,13 +49,6 @@ public class merge_sort_using_recursion {
 				merge(arr,l,m,r);
 			}
 		}
-		static void printArray(int arr[])
-		{
-			int n=arr.length;
-			for (int i=0;i<n;++i)
-				System.out.print(arr[i]+" ");
-			System.out.println();
-		}
 		public static void main(String args[])
 		{
 			Scanner sc=new Scanner(System.in);
@@ -69,11 +59,13 @@ public class merge_sort_using_recursion {
 			for(int i=0;i<n;i++)
 				arr[i]=sc.nextInt();
 			System.out.println("Given Array");
-			printArray(arr);
+			for(int i=0;i<arr.length;i++)
+				System.out.print(arr[i]+" ");
 			merge_sort_using_recursion ob=new merge_sort_using_recursion();
 			ob.sort(arr,0,arr.length-1);
-			System.out.println("\n Sorted array");
-			printArray(arr);
+			System.out.println("\nSorted array");
+			for(int i=0;i<arr.length;i++)
+				System.out.print(arr[i]+" ");
 		}
 
 }
